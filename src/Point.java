@@ -34,4 +34,8 @@ final class Point
       return (x == p.x && Math.abs(y - p.y) == 1) ||
               (y == p.y && Math.abs(x - p.x) == 1);
    }
+
+   public int manDist(Point p){
+      return Math.abs(p.x-x) + Math.abs(p.y-y);
+   }
 }
