@@ -15,8 +15,8 @@ public class PathingMain extends PApplet
    private PImage obstacle;
    private PImage goal;
    private List<Point> path;
-   private PathingStrategy strategy = new SingleStepPathingStrategy();
-   //private PathingStrategy strategy = new AStarPathingStrategy();
+   //private PathingStrategy strategy = new SingleStepPathingStrategy();
+   private PathingStrategy strategy = new AStarPathingStrategy();
 
    private static final int TILE_SIZE = 32;
 
@@ -77,7 +77,7 @@ public class PathingMain extends PApplet
          grid[11][col] = GridValues.OBSTACLE;
       }
 
-      grid[13][14] = GridValues.GOAL;
+      grid[14][13] = GridValues.GOAL;
    }
 
    public void draw()

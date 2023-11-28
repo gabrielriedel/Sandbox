@@ -3,9 +3,9 @@ import java.util.Objects;
 public class Node {
 
     private final Node priorNode;
-    private final int g;
+    private int g;
     private final int h;
-    private final int f;
+    private int f;
     private final Point loc;
 
     public Node(Node priorNode, int g, int h, int f, Point loc){
@@ -33,5 +33,18 @@ public class Node {
 
     public int getG (){return g;}
 
+    public int getH (){return h;}
+
+
+    public void setG(int a){
+        this.g = a;
+    }
+
     public int getF(){return f;}
+
+    public void setF(int a){
+        this.f = a;
+    }
+
+    public Node getPrior(){return priorNode;}
 }
